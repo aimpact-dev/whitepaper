@@ -84,15 +84,27 @@ The typical user flow for the AImpact platform consists of the following steps:
     Having frontend and smartcontract launched locally in the sandbox environment, user tests the application.
     User can also test the application in the live environment, where the smartcontract is deployed to the chosen blockchain Testnet or Devnet (frontend is still running locally in the sandbox environment).
     
+
+    \item \textbf{AI-based auditing}: 
+    User can request an AI-based auditing of the smartcontract code.
+    The AI audits the smartcontract code (using several LLMs) for security vulnerabilities and performance issues.
+    System will provide a report with the results of the audit.
+    User can request a fix for the issues found in the audit if any.
     
-    \item \textbf{Deployment}: Upon approval, the platform:
-    \begin{itemize}
-        \item Deploys smart contracts to the chosen blockchain
-        \item Hosts the frontend interface
-        \item Sets up necessary infrastructure
-    \end{itemize}
     
+    \item \textbf{Deployment}: 
+    When user is satisfied with the application, it can be deployed to production environment.
+
 \end{enumerate}
+
+\textbf{Limitations:}
+\begin{itemize}
+    \item User must connect their wallet in order to use the platform.
+    \item User can only deploy the application to the chain that is supported by the wallet (for example, if user connected Solana wallet, they can only deploy the application to Solana blockchain).
+    \item In order to use the platform user should purchase messages using their wallet.
+    \item Fronted is deployed to the supported hosting provider, which is chosen by the platform. If user wants to deploy it elsewhere, they can do so by using the provided code.
+
+\end{itemize}
 
 
 % \begin{figure}[h]
