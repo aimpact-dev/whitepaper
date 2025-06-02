@@ -65,27 +65,25 @@ The typical user flow for the AImpact platform consists of the following steps:
     
     \item \textbf{Application Design Generation}: The platform's AI system generates a user interface for the application. 
     User can continiously modify the design of the application with text prompts or images.
+    
     \textit{Note: user can choose to skip this step and start developing frontend code without a design. 
     This is useful for quick prototyping and allow user to make changes to the design more easily.}
    
     \item \textbf{Frontend Code Generation}: 
     Based on the provided design, the AI generates the frontend code for the application. 
     Frontend is launched in a sandbox environment, where user can test the application and modify the code either with text prompts or with a visual code editor.
-    
+   
+    \textit{Note: user can choose to skip this step and start developing smart contract code without a frontend component. }
+
     \item \textbf{Smart Contract Code Generation}: 
-    Based on the analysis, the AI generates the smart contract code for the application. 
-    Smart contract is launched in a sandbox environment, where user can test the application and modify the code either with text prompts or with a visual code editor.
-    
+    Using provided description, the AI generates the smart contract code for the application. Under the hood, the AI uses a database with default smart contracts, MCP module and LLM for fine-tuning the code for the specific application (we will discuss this in more detail in the upcoming sections).
+    Smart contract is also launched in a sandbox environment using locally run blockchain environment, where user can test the application and modify the code either with text prompts or with a visual code editor.
     
 
-    \item \textbf{Review \& Customization}: Users review the generated code and can request modifications or customizations through natural language prompts.
+    \item \textbf{Testing}: 
+    Having frontend and smartcontract launched locally in the sandbox environment, user tests the application.
+    User can also test the application in the live environment, where the smartcontract is deployed to the chosen blockchain Testnet or Devnet (frontend is still running locally in the sandbox environment).
     
-    \item \textbf{Testing}: The platform automatically tests the generated code for:
-    \begin{itemize}
-        \item Security vulnerabilities
-        \item Performance optimization
-        \item Functionality verification
-    \end{itemize}
     
     \item \textbf{Deployment}: Upon approval, the platform:
     \begin{itemize}
@@ -94,12 +92,6 @@ The typical user flow for the AImpact platform consists of the following steps:
         \item Sets up necessary infrastructure
     \end{itemize}
     
-    \item \textbf{Monitoring \& Updates}: Post-deployment, users can:
-    \begin{itemize}
-        \item Monitor application performance
-        \item Request updates or modifications
-        \item Access analytics and usage data
-    \end{itemize}
 \end{enumerate}
 
 
