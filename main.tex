@@ -107,23 +107,42 @@ The typical user flow for the AImpact platform consists of the following steps:
 \end{itemize}
 
 
-% \begin{figure}[h]
-%     \centering
-%     \includegraphics[width=\textwidth]{imgs/userflow.png}
-%     \caption{AImpact platform userflow diagram showing the process from natural language input to deployed application}
-%     \label{fig:userflow}
-% \end{figure}
+\section{Technical Overview}
+\label{sec:literature}
+
+
+\subsection{AImpact Smart Contract Templates}
+
+In order to improve generation of the smart contract code, the AImpact platform uses a database of smart contract templates. Those templates are 
+selected by AImpact MCP module (we will discuss this in more detail in the upcoming sections).
+LLM uses the selected template as a base for the smart contract code generation and fine-tunes it to the specific application.
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{imgs/templates.png}
+    \caption{Smart contract templates}
+    \label{fig:templates}
+\end{figure}
+
+
+\subsection{AImpact MCP Module}
+
+The platform uses AImpact MCP module to interact with the smart contract code generation and deployment. It provides LLM a set of tools to
+access the database of smart contract templates, deploy the smart contract either to the sandbox environment or to the chosen blockchain Testnet, 
+Devnet or Mainnet, test the smart contract, deploy the frontend to the hosting provider.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{imgs/mcp.png}
+    \caption{AImpact MCP Module}
+    \label{fig:mcp}
+\end{figure}
+
+
 
 % The userflow diagram in Figure \ref{fig:userflow} illustrates the end-to-end process of how users interact with the AImpact platform. Users begin by describing their desired Web3 application in natural language, which is then processed by our AI system to generate the appropriate smart contracts and frontend code. The platform handles all technical complexities, from contract deployment to frontend hosting, allowing users to focus solely on their application's core functionality and business logic.
 
-
-
-
-
-
-
-\section{Technical Overview}
-\label{sec:literature}
 
 
 \end{document} 
