@@ -1,0 +1,125 @@
+\documentclass[12pt,a4paper]{article}
+
+% Essential packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{geometry}
+
+% Page geometry
+\geometry{margin=1in}
+
+% Hyperlink setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    citecolor=red
+}
+
+% Title page information
+\title{AImpact: Your AI co-founder. Whitepaper}
+\author{Placeholder \\ OSTOLEX \\ \texttt{placeholder@ostolex.com}}
+\date{\today}
+
+\begin{document}
+
+% Title page
+\maketitle
+
+% Abstract
+\begin{abstract}
+AImpact represents an AI-powered platform designed to democratize Web3 development by enabling users to create blockchain applications through natural language prompts. It eliminates traditional coding barriers, allowing users to describe their Web3 project ideas in plain language and receive fully functional applications in return. The platform's AI-driven approach reduces development time and complexity while maintaining the security and functionality expected from Web3 applications. 
+\end{abstract}
+
+% Keywords (optional)
+\noindent\textbf{Keywords:} artificial intelligence, Web3, blockchain, Solana, smart contracts, decentralized applications, AI-powered development, prompt-based programming, DApp generation
+
+\newpage
+
+% Table of contents
+\tableofcontents
+\newpage
+
+% Main content
+\section{Introduction}
+\label{sec:introduction}
+
+The rapid evolution of blockchain technology and Web3 applications has created unprecedented opportunities for innovation in decentralized systems. However, the technical complexity of blockchain development remains a significant barrier to entry for many potential innovators. Traditional Web3 development requires extensive knowledge of specialized programming languages, blockchain protocols, and cryptographic principles, often deterring creative individuals and businesses from participating in this transformative technology.
+
+AImpact emerges as a solution to this challenge by leveraging artificial intelligence to bridge the gap between ideas and implementation. Our platform transforms natural language descriptions into fully functional Web3 applications, democratizing access to blockchain technology and enabling a new wave of innovation in the decentralized space.
+
+This whitepaper outlines the technical architecture, capabilities, and potential applications of AImpact.
+
+\section{Userflow}
+\label{sec:userflow}
+
+The typical user flow for the AImpact platform consists of the following steps:
+
+\begin{enumerate}
+    \item \textbf{Project Description}: Users provide a natural language description of their desired Web3 application, including functionality, features, and requirements.
+    
+    \item \textbf{Application Design Generation}: The platform's AI system generates a user interface for the application. 
+    User can continiously modify the design of the application with text prompts or images.
+    \textit{Note: user can choose to skip this step and start developing frontend code without a design. 
+    This is useful for quick prototyping and allow user to make changes to the design more easily.}
+   
+    \item \textbf{Frontend Code Generation}: 
+    Based on the provided design, the AI generates the frontend code for the application. 
+    Frontend is launched in a sandbox environment, where user can test the application and modify the code either with text prompts or with a visual code editor.
+    
+    \item \textbf{Smart Contract Code Generation}: 
+    Based on the analysis, the AI generates the smart contract code for the application. 
+    Smart contract is launched in a sandbox environment, where user can test the application and modify the code either with text prompts or with a visual code editor.
+    
+    
+
+    \item \textbf{Review \& Customization}: Users review the generated code and can request modifications or customizations through natural language prompts.
+    
+    \item \textbf{Testing}: The platform automatically tests the generated code for:
+    \begin{itemize}
+        \item Security vulnerabilities
+        \item Performance optimization
+        \item Functionality verification
+    \end{itemize}
+    
+    \item \textbf{Deployment}: Upon approval, the platform:
+    \begin{itemize}
+        \item Deploys smart contracts to the chosen blockchain
+        \item Hosts the frontend interface
+        \item Sets up necessary infrastructure
+    \end{itemize}
+    
+    \item \textbf{Monitoring \& Updates}: Post-deployment, users can:
+    \begin{itemize}
+        \item Monitor application performance
+        \item Request updates or modifications
+        \item Access analytics and usage data
+    \end{itemize}
+\end{enumerate}
+
+
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=\textwidth]{imgs/userflow.png}
+%     \caption{AImpact platform userflow diagram showing the process from natural language input to deployed application}
+%     \label{fig:userflow}
+% \end{figure}
+
+% The userflow diagram in Figure \ref{fig:userflow} illustrates the end-to-end process of how users interact with the AImpact platform. Users begin by describing their desired Web3 application in natural language, which is then processed by our AI system to generate the appropriate smart contracts and frontend code. The platform handles all technical complexities, from contract deployment to frontend hosting, allowing users to focus solely on their application's core functionality and business logic.
+
+
+
+
+
+
+
+\section{Technical Overview}
+\label{sec:literature}
+
+
+\end{document} 
