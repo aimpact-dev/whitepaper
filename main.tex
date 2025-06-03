@@ -140,6 +140,109 @@ Devnet or Mainnet, test the smart contract, deploy the frontend to the hosting p
 \end{figure}
 
 
+\subsection{Deployment}
+
+Deployment stages for the smart contract:
+\begin{enumerate}
+    \item \textbf{Sandbox Environment}: Locally run blockchain environment simulation of the chosen blockchain. 
+    As it is an isolated environment, contract must be deployed on further stages in order to be accessible by other users.
+    \item \textbf{Testnet / Devnet}: Deploy the smart contract to the chosen blockchain Testnet or Devnet. 
+    AImpact also provides in-built tool for token airdrop request for project deployment.
+    \item \textbf{Mainnet}: Production deployment of the smart contract.
+\end{enumerate}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{imgs/deployment.png}
+    \caption{Deployment of the Projects}
+    \label{fig:deployment}
+\end{figure}
+
+
+Deployment stages for the frontend:
+\begin{enumerate}
+    \item \textbf{Sandbox Environment}: Locally run frontend environment simulation of the chosen hosting provider.
+    Frontend can access the smart contract deployed in the sandbox environment.
+    \item \textbf{Production Environment}: Deploy the frontend to the ICP canister.
+\end{enumerate}
+
+\textit{Note: AImpact provides subdomain for the frontend deployment which can be used to access the deployed frontend.}
+
+
+
+
+\subsection{Scheme of AImpact Infrastructure Architecture}
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{imgs/architecture.png}
+    \caption{Scheme of AImpact Infrastructure Architecture}
+    \label{fig:architecture}
+\end{figure}
+
+
+\subsubsection{Frontend}
+
+Frontend is the primary interface where users interact with the AImpact system. 
+It provides an intuitive and user-friendly environment that abstracts the underlying complexity of blockchain technology and smart contract development. 
+Through the frontend, users can describe their Web3 application requirements in natural language, monitor the development process, 
+and manage their deployed applications.
+
+
+\subsubsection{Backend}
+
+The Backend serves as the central orchestration layer of the AImpact platform, coordinating communication between all system components. 
+It handles user authentication, session management, and request routing to appropriate modules. 
+Backend also manages the platform's database systems, storing user projects, smart contract templates, deployment configurations, and audit reports.
+
+
+\subsubsection{MCP Module}
+
+The Model Context Protocol (MCP) Module acts as the intermediary between the Large Language Model (LLM) and the platform's tools and resources. 
+This module provides the LLM with structured access to smart contract templates, thirdparty APIs, blockchain deployment tools, and code analysis utilities. 
+
+Components:
+\begin{itemize}
+    \item \textit{AImpact MCP}: Native MCP module.
+    \item \textit{Thirdparty MCPs}:
+        \begin{itemize}
+            \item \textit{OpenAPI}: Provides access to public APIs on the internet.
+            \item \textit{Git}: Manages git repositories.
+        \end{itemize}
+    .
+
+\end{itemize}
+\subsubsection{Blockchain Module}
+
+The Blockchain Module manages blockchain-related operations within the AImpact platform. 
+It provides abstracted interfaces for multiple blockchain networks. 
+This module handles smart contract deployment, and interaction across different environments (testnet, devnet, and mainnet) 
+as well as frontend deployment (ICP canister). 
+
+
+\subsubsection{LLM Module}
+
+The Large Language Model Module represents the core AI intelligence of the AImpact platform. 
+It integrates multiple language models optimized for different tasks and using different resources. 
+
+Models can be splitted into two groups:
+\begin{itemize}
+    \item \textit{Thirdparty based}: Proprietary models that are runned by thirdparty providers and accessed through API.
+    \item \textit{Local based}: Open source models that are runned on the local machine and fine-tuned for the AImpact usecases.
+\end{itemize}
+
+
+
+\subsubsection{Deployment Module}
+
+The Deployment Module manages the deployment for both smart contracts and frontend applications. 
+For smart contracts, this module coordinates deployment across different blockchain networks, manages contract verification processes. 
+For frontend applications, it integrates with the Internet Computer Protocol (ICP) for decentralized hosting, 
+manages domain configurations, and ensures integration with deployed smart contracts. 
+The module also implements deployment monitoring and automated health checks.
+
+
 
 % The userflow diagram in Figure \ref{fig:userflow} illustrates the end-to-end process of how users interact with the AImpact platform. Users begin by describing their desired Web3 application in natural language, which is then processed by our AI system to generate the appropriate smart contracts and frontend code. The platform handles all technical complexities, from contract deployment to frontend hosting, allowing users to focus solely on their application's core functionality and business logic.
 
